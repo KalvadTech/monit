@@ -80,7 +80,7 @@ cat /etc/os-release | grep PRETTY_NAME | cut -d '"' -f 2
 EOF
 else
     if [ -f "/etc/redhat-release" ]; then
-    cat <<EOF >> $APP_HOME/monit-$MONIT_VERSION/scripts/release.sh
+        cat <<EOF >> $APP_HOME/monit-$MONIT_VERSION/scripts/release.sh
 #!/bin/bash
 cat /etc/redhat-release
 EOF
