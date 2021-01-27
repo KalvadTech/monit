@@ -4,7 +4,7 @@ set -euo pipefail
 URL="SLACK_WEBHOOK_URL" # Slack Webhook URL
 
 COLOR=${MONIT_COLOR:-$([[ $MONIT_EVENT == *"succeeded"* ]] && echo good || echo danger)}
-TEXT=$(echo -e "$MONIT_EVENT: $MONIT_DESCRIPTION (http://monit.souqalmal.com:2812)" | python3 -c "import json,sys;print(json.dumps(sys.stdin.read()))")
+TEXT=$(echo -e "$MONIT_EVENT: $MONIT_DESCRIPTION (Monit@Kalvad)" | python3 -c "import json,sys;print(json.dumps(sys.stdin.read()))")
 
 PAYLOAD="{
   \"attachments\": [
